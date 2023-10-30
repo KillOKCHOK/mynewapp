@@ -10,7 +10,8 @@
         "lint-staged": "lint-staged --config lintstaged.js",
         "husky-install": "husky install",
         "format": "prettier --check --ignore-path .gitignore .",
-        "format:fix": "prettier --write --ignore-path .gitignore ."
+        "format:fix": "prettier --write --ignore-path .gitignore .",
+        "prepare": "husky install"
     },
     "dependencies": {
         "next": "14.0.0",
@@ -18,6 +19,8 @@
         "react-dom": "^18"
     },
     "devDependencies": {
+        "@commitlint/cli": "^18.2.0",
+        "@commitlint/config-conventional": "^18.1.0",
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
