@@ -11,7 +11,12 @@
         "husky-install": "husky install",
         "format": "prettier --check --ignore-path .gitignore .",
         "format:fix": "prettier --write --ignore-path .gitignore .",
-        "prepare": "husky install"
+        "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npm run lint-staged\""
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
     },
     "dependencies": {
         "next": "14.0.0",
